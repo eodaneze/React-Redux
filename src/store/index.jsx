@@ -17,6 +17,8 @@ const reducerFn = (state = {counter: 0}, action) => {
             return {counter: state.counter + 1}
         case "DECREMENT":
             return {counter: state.counter - 1}
+        case "ADD":
+            return {counter: state.counter + action.payload}
         default:
             return state
     }
